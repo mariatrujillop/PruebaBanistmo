@@ -8,5 +8,5 @@ Feature: Validar que el Contrato único de Productos y Servicios Bancarios sea e
 
         Given que el usuario este en la pagina Banistmo
         When el usuario descargue el PDF
-        Then el usuario ve el PDF sea correcto
+        Then el usuario ve el PDF sea correcto.
 
