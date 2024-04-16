@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="85598079f24310bf7283164c400ab1ee5ab0004b3eebab9e08a97565f5ec4b04.html">Validar Que El Contrato &uacute;nico De Productos Y Servicios Bancarios Sea El Correcto</a></span>
+                > <span class="truncate-60"><a
+                    href="c1cf5fe537bbd4bd99514702cf21d36cc2a999c4a28cb5b8409822e2f41c11bc.html">Yo como usuario requiero validar el Contrato &uacute;nico de Productos y Servicios Bancarios sea el correcto </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 15-04-2024 20:04</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Validar Que El Contrato único De Productos Y Servicios Bancarios Sea El Correcto </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Yo como usuario requiero validar el Contrato &uacute;nico de Productos y Servicios Bancarios sea el correcto
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="02351b650e3e5167f3ab703922cb03804ebb183f8fa8ce481dc87d0471f42026.png" title=" Given que el usuario este en la pagina Banistmo" width="1920"/>
+                <img src="29a3ba39716863c6f0579ae5af197731907463efa5487242f670c367cbeb863c.png" title=" When el usuario descargue el PDF" width="1920"/>
+                <img src="29a3ba39716863c6f0579ae5af197731907463efa5487242f670c367cbeb863c.png" title=" Usuario valida pdf" width="1920"/>
+                <img src="29a3ba39716863c6f0579ae5af197731907463efa5487242f670c367cbeb863c.png" title=" usuario clicks on Aceptar aviso" width="1920"/>
+                <img src="1fe5f080982d36379e4aef1078d1a4ca2a27b875614cc204bdf5ec027120da2c.png" title=" usuario clicks on productos y servicios" width="1920"/>
+                <img src="4ed6d81489352e5a02dee03cadfc0b51997fc10e0de798adec74b02403058d3a.png" title=" usuario clicks on productos y servicios (completed)" width="1920"/>
+                <img src="4ed6d81489352e5a02dee03cadfc0b51997fc10e0de798adec74b02403058d3a.png" title=" usuario clicks on Depositos" width="1920"/>
+                <img src="31714d5001d7e974b98b9f9455a5c3b2336bc04c9a3ca8dfacb3bedbbefd6cd8.png" title=" usuario clicks on Depositos (completed)" width="1920"/>
+                <img src="286e677c7e0435745e90cd3ad0b63e089da5c93bbcd30bf747da610ea7c43314.png" title=" usuario clicks on Cuenta ahorro comercial" width="1920"/>
+                <img src="6c3781798561db4ed273f529c1502d886a389fc2039dd8d163995c45314b1983.png" title=" usuario clicks on Cuenta ahorro comercial (completed)" width="1920"/>
+                <img src="311f39b447b4eea974a279dc54d523a19e923acc53175177d7554577427e47fb.png" title=" usuario clicks on Documentos" width="1920"/>
+                <img src="2a518150b2c1a59ea0a9fe5a781f8634ecec598d48a83e3e7baac593db990c07.png" title=" usuario clicks on Documentos (completed)" width="1920"/>
+                <img src="2a518150b2c1a59ea0a9fe5a781f8634ecec598d48a83e3e7baac593db990c07.png" title=" Usuario change windows" width="1920"/>
+                <img src="2a518150b2c1a59ea0a9fe5a781f8634ecec598d48a83e3e7baac593db990c07.png" title=" Usuario change windows (completed)" width="1920"/>
+                <img src="2a518150b2c1a59ea0a9fe5a781f8634ecec598d48a83e3e7baac593db990c07.png" title=" usuario clicks on Descargar PDF" width="1920"/>
+                <img src="b69958962308bcd4d157aecae236bf0a8a841f80e8b1f6e409ac1f4195f310cc.png" title=" usuario clicks on Descargar PDF (completed)" width="1920"/>
+                <img src="b69958962308bcd4d157aecae236bf0a8a841f80e8b1f6e409ac1f4195f310cc.png" title=" Usuario change windows" width="1920"/>
+                <img src="51fb101b7253ce1bf6572caa0732a0f2bc43080e7653f3838a272aa16744e4b6.png" title=" Usuario change windows (completed)" width="1920"/>
+                <img src="51fb101b7253ce1bf6572caa0732a0f2bc43080e7653f3838a272aa16744e4b6.png" title=" Usuario valida pdf (completed)" width="1920"/>
+                <img src="51fb101b7253ce1bf6572caa0732a0f2bc43080e7653f3838a272aa16744e4b6.png" title=" When el usuario descargue el PDF (completed)" width="1920"/>
+                <img src="9f0ffb93a28fc7315a65794ef3fa0d18254a4ea72de99f670c58142135c141c9.png" title=" Then el usuario ve el PDF sea correcto" width="1920"/>
+                <img src="9f0ffb93a28fc7315a65794ef3fa0d18254a4ea72de99f670c58142135c141c9.png" title=" Then validacion" width="1920"/>
+                <img src="d1bf862a0012876c3d772894dd219e5293e2b1707e5fc2f0d634ffbae5a8a30b.png" title=" Then validacion (completed)" width="1920"/>
+                <img src="d1bf862a0012876c3d772894dd219e5293e2b1707e5fc2f0d634ffbae5a8a30b.png" title=" Then el usuario ve el PDF sea correcto (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.10</span>
+</div>
+</body>
+</html>

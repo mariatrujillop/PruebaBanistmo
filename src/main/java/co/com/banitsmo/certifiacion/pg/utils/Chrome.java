@@ -21,7 +21,7 @@ public class Chrome {
 
 
     public ChromeDriver pruebaA(){
-        driver.get("");
+        driver.get("https://www.banistmo.com/wps/portal/banistmo/empresas");
         return driver;
     }
 
